@@ -6,7 +6,7 @@ interface Props {
   messages: Message[];
 }
 
-export const ChatMessageList = ({ messages }: Props) => {
+export const ChatMessageLis = ({ messages }: Props) => {
   return (
     <List sx={{ flexGrow: 1, overflow: 'auto', mb: 2 }}>
       {messages.map((message, index) => (
