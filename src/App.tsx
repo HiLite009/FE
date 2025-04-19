@@ -14,7 +14,7 @@ const theme = createTheme({
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvder theme={theme}>
             <CssBaseline/>
             <Router>
                 <Routes>
@@ -23,7 +23,7 @@ function App() {
                     <Route path="/" element={<Navigate to="/login" replace/>}/>
                 </Routes>
             </Router>
-        </ThemeProvider>
+        </ThemeProvder>
     );
 }
 
