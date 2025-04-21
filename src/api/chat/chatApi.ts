@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { ChatMessage } from '../../types/chat.ts';
+import axios from "@api/axiosInstance";
+import type { ChatMessage } from "@models/chat";
 
-const BASE_URL: string = import.meta.env.REACT_APP_API_BASE_URL;
+const BASE_URL: string = import.meta.env.VITE_APP_API_BASE_URL;
 
 export const getChatHistory = async (): Promise<ChatMessage[]> => {
     const response = await axios.get<ChatMessage[]>(`${BASE_URL}/chat/history`);

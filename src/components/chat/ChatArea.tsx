@@ -2,7 +2,7 @@ import {Box, Typography} from '@mui/material';
 import {useState} from 'react';
 import {ChatMessageList} from './ChatMessageList';
 import {ChatInputBar} from './ChatInputBar';
-import {Message} from "../../types";
+import {Message} from "../../models";
 
 
 export const ChatArea = () => {

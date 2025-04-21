@@ -21,6 +21,11 @@
     "noFallthroughCasesInSwitch": true,
 
     "baseUrl": "src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@models/*": ["models/*"],
+      "@components/*": ["components/*"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

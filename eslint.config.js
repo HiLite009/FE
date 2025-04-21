@@ -13,6 +13,7 @@ export default [
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsParser,
+      node: true,
       parserOptions: {
         ecmaVersion: '2022',
         ecmaFeatures: { jsx: true },
