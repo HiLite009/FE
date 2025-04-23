@@ -1,6 +1,5 @@
 import { List, ListItem, ListItemText, Paper } from '@mui/material';
-import {Message} from "../../models";
-
+import { Message } from '../../models';
 
 interface Props {
   messages: Message[];

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, TextField, Button, Typography } from '@mui/material';
-import { LoginLayout } from '../../components/layout/LoginLayout';
+import { LoginLayout } from '@components/layout/LoginLayout.tsx';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -17,11 +17,11 @@ const LoginPage = () => {
   return (
     <LoginLayout>
       <Typography
-          component="h1"
-          variant="h5"
-          align="center"
-          gutterBottom
-          sx={{ fontWeight: 'bold' }}
+        component="h1"
+        variant="h5"
+        align="center"
+        gutterBottom
+        sx={{ fontWeight: 'bold' }}
       >
         채팅 앱 로그인
       </Typography>
@@ -53,12 +53,7 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          sx={{ mt: 3, mb: 2 }}
-        >
+        <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
           로그인
         </Button>
       </Box>

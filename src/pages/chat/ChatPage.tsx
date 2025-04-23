@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import {ChatLayout} from '../../components/layout/ChatLayout';
-import {ChatHistory} from '../../components/history/ChatHistory';
-import {ChatArea} from '../../components/chat/ChatArea';
+import { useState } from 'react';
+import { ChatLayout } from '@components/layout/ChatLayout.tsx';
+import { ChatHistory } from '@components/history/ChatHistory.tsx';
+import { ChatArea } from '@components/chat/ChatArea.tsx';
 
 const ChatPage = () => {
   const [, setSelectedChat] = useState<string | null>(null);
@@ -31,11 +31,8 @@ const ChatPage = () => {
 
   return (
     <ChatLayout
-      history={
-        <ChatHistory
-          history={mockHistory}
-          onSelectChat={handleSelectChat}/>}
-      chat={<ChatArea/>}
+      history={<ChatHistory history={mockHistory} onSelectChat={handleSelectChat} />}
+      chat={<ChatArea />}
     />
   );
 };

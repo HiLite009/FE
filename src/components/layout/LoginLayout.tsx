@@ -1,7 +1,7 @@
-import {Container, Paper} from '@mui/material';
-import {ReactNode} from 'react';
+import { Container, Paper } from '@mui/material';
+import { ReactNode } from 'react';
 
-export const LoginLayout = ({children}: { children: ReactNode }) => {
+export const LoginLayout = ({ children }: { children: ReactNode }) => {
   return (
     <Container
       maxWidth="sm"

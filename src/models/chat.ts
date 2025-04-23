@@ -1,6 +1,6 @@
 export interface ChatMessage {
-    id: string;
-    text: string;
-    sender: 'user' | 'bot';
-    timestamp: string;
+  id: string;
+  text: string;
+  sender: 'user' | 'bot';
+  timestamp: string;
 }

@@ -1,4 +1,4 @@
-import {Paper, IconButton, TextField} from '@mui/material';
+import { Paper, IconButton, TextField } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import MicIcon from '@mui/icons-material/Mic';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
