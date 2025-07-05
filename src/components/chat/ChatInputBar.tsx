@@ -1,5 +1,5 @@
 import { Paper, IconButton, TextField } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
+
 import MicIcon from '@mui/icons-material/Mic';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 
@@ -21,17 +21,20 @@ export const ChatInputBar = ({ input, setInput, handleSend }: Props) => {
         p: 1,
         borderRadius: '999px',
         width: '100%',
+        maxWidth: '768px',
       }}
     >
-      <IconButton>
-        <AddIcon />
-      </IconButton>
-
       <TextField
         multiline
         maxRows={4}
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSend(e);
+          }
+        }}
         placeholder="무엇이든 물어보세요"
         variant="standard"
         InputProps={{

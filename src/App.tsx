@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import LoginPage from './pages/login/LoginPage.tsx';
-import ChatPage from './pages/chat/ChatPage.tsx';
+import AppRoutes from './routes/AppRoutes.tsx';
 
 const theme = createTheme({
   palette: {
@@ -17,11 +16,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/chat" element={<ChatPage />} />
-          <Route path="/" element={<Navigate to="/login" replace />} />
-        </Routes>
+        <AppRoutes />
       </Router>
     </ThemeProvider>
   );

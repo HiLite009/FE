@@ -25,6 +25,7 @@
       "@api/*": ["api/*"],
       "@models/*": ["models/*"],
       "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["src"],
