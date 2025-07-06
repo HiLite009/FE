@@ -13,8 +13,10 @@ import {
 import { LoginLayout } from '@components/layout/LoginLayout.tsx';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import { login } from '@api/login/loginApi';
+import { loginApi } from '@api/login/loginApi';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import { ApiErrorResponse } from '@models/login';
+
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -24,12 +26,17 @@ const LoginPage = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { accessToken } = await login({ username, password });
-      localStorage.setItem('accessToken', accessToken);
+      const { token } = await loginApi({ username, password });
+      localStorage.setItem('accessToken', token);
       navigate('/chat');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Login failed:', error);
-      // You can add user-facing error handling here
+      if (error.response && error.response.data) {
+        const apiError = error.response.data as ApiErrorResponse;
+        alert(`로그인 실패: ${apiError.message}`);
+      } else {
+        alert('알 수 없는 오류가 발생했습니다.');
+      }
     }
   };
 
