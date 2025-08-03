@@ -17,7 +17,6 @@ import { loginApi } from '@api/login/loginApi';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { ApiErrorResponse } from '@models/login';
 
-
 const LoginPage = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');

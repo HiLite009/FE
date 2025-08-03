@@ -28,6 +28,7 @@ export const ChatArea = () => {
     try {
       await postChat(input);
     } catch (error) {
+      console.log(error);
       const errorMessage: Message = {
         id: Date.now().toString(),
         text: '인터넷 연결이 원활하지 않습니다. 다시 시도해주세요.',
